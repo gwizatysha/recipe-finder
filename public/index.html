@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <h1>Recipe Finder</h1>
+        <p>Find something to cook with what you have. Search, filter, sort and save favorite</p>
+    </header>   
+
+    <main>
+        <form id ="search-form" class="controls" role="search" novalidate>
+            <div class="field grow">
+                <label for="q">Search by dish name</label>
+                <input id="q" name="q" type="search" maxlength="60" placeholder="e.g chicken, pasta, arrabiata" autocomplete="off">
+            </div>
+            <div class="field">
+                <label for="ingredient">Main ingredient</label>
+                <input id="ingredient" name="ingredient" type="text" maxlength="60" placeholder="e.g salmon" autocomplete="off">
+            </div>
+            <div class="field">
+                <label for="category">Category</label>
+                <select id="category"><option value ="">Any</option></select>
+            </div>
+            <div class="field">
+                <label for="area">Cuisine</label>
+                <select id="area"><option value="">Any</option></select>
+            </div>
+            <div class="field">
+                <label for="sort">Sort</label>
+                <select id="sort">
+                    <option value="az"> Name A →  Z</option>
+                    <option value="za"> Name Z →  A</option>
+                </select>
+            </div>
+            <div class="actions">
+                <button type="submit" class="primary">Search</button>
+                <button type="button" id="random-btn">Surprise me</button>
+                <button type="button" id="favorites-btn" aria-pressed="false">★ Favorites <span id="fav-count">0</span></button>
+                <button type="button" id="reset-btn" class="ghost">Reset</button>
+            </div>
+        </form>
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+        <div id="error" class="error" role="alert" hidden></div>
+        <section id="results" class="grid" aria-label="Recipe results"></section>
+        </main>
+
+        <dialog id="modal" aria-labelledby="modal-title">
+            <article id="modal-body"></article>
+            <button type="button" id="modal-close" class="ghost" aria-label="Close recipe">Close</button>
+        </dialog>
+
+        <footer class="site-footer">
+            Recipe data from <a href="https://www.themealdb.com" target="_blank" rel="noopener noreferrer">TheMealDB</a>.
+            Served by: <strong id="served-by">...</strong>
+        </footer>
+        <script src="app.js"></script>
+</body>
+</html>
