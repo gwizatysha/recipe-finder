@@ -3,6 +3,7 @@
 Recipe Finder lets you search recipes by name, filter them by category, and sort the results. It is an Express server that calls TheMealDB API and serves a plain HTML/CSS/JavaScript frontend. The API key stays on the server and is never sent to the browser.
 
 **Live (load balancer):** http://18.170.230.246
+**Demo video:**: https://youtu.be/LrqDwPDnk8A
 
 ## Features
 
