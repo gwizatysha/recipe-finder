@@ -28,6 +28,7 @@ app.use(
                 connectSrc: ["'self'"],
                 frameSrc: ["'none'"],
                 objectSrc: ["'none'"],
+                'upgrade-insecure-requests': null,
             },
         },
     })
